@@ -210,21 +210,18 @@ function App() {
           width: "100%",
         }}
       >
-        <img
-          src={squirrelImg}
-          alt="cute squirrels in love"
-          style={{
-            width: "220px",
-            height: "160px",
-            objectFit: "cover",
-            borderRadius: "16px",
-            marginBottom: "12px",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
-          }}
-        />
-
-        <div style={{ fontSize: "26px", marginBottom: "20px" }}>
-          🙈😅
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px" }}>
+          <img
+            src={squirrelImg}
+            alt="cute squirrels in love"
+            style={{
+              width: "220px",
+              height: "160px",
+              objectFit: "cover",
+              borderRadius: "16px",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
+            }}
+          />
         </div>
 
         <h1
