@@ -27,7 +27,7 @@ function Confetti({ active }: { active: boolean }) {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const colors = ["#ff4d6d", "#ff8e53", "#ffcc70", "#ff6b9d", "#c9184a", "#fff"];
+    const colors = ["#e91e8c", "#f48fb1", "#f8bbd9", "#ad1457", "#fff", "#fce4ec"];
     particlesRef.current = Array.from({ length: 120 }, (_, i) => ({
       id: i,
       x: Math.random() * canvas.width,
@@ -88,40 +88,41 @@ function CelebrationPopup({ onClose }: { onClose: () => void }) {
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.5)",
+        background: "rgba(0,0,0,0.35)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         zIndex: 1000,
-        backdropFilter: "blur(4px)",
+        backdropFilter: "blur(6px)",
       }}
       onClick={onClose}
     >
       <div
         onClick={(e) => e.stopPropagation()}
         style={{
-          background: "linear-gradient(135deg, #fff0f5, #fff8f0)",
-          borderRadius: "30px",
-          padding: "50px 40px",
+          background: "#fff",
+          borderRadius: "24px",
+          padding: "48px 40px",
           textAlign: "center",
-          boxShadow: "0 30px 80px rgba(255, 77, 109, 0.4)",
-          maxWidth: "380px",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.12)",
+          maxWidth: "360px",
           width: "90%",
-          animation: "popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
+          animation: "popIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)",
         }}
       >
-        <div style={{ fontSize: "70px", marginBottom: "10px", lineHeight: 1 }}>
+        <div style={{ fontSize: "64px", marginBottom: "8px", lineHeight: 1 }}>
           💍
         </div>
-        <div style={{ fontSize: "36px", marginBottom: "12px" }}>
+        <div style={{ fontSize: "32px", marginBottom: "16px" }}>
           🎉 Yaaaay! 🎉
         </div>
         <h2
           style={{
-            fontSize: "26px",
-            fontWeight: "bold",
-            color: "#c9184a",
-            marginBottom: "28px",
+            fontSize: "20px",
+            fontWeight: "600",
+            color: "#333",
+            marginBottom: "32px",
+            lineHeight: 1.5,
           }}
         >
           Ne as zanm bas toya znxe o dene o pise
@@ -129,18 +130,18 @@ function CelebrationPopup({ onClose }: { onClose: () => void }) {
         <button
           onClick={onClose}
           style={{
-            padding: "12px 32px",
+            padding: "12px 36px",
             fontSize: "16px",
             fontWeight: "bold",
-            background: "linear-gradient(135deg, #ff4d6d, #c9184a)",
+            background: "#e91e8c",
             color: "white",
             border: "none",
             borderRadius: "50px",
             cursor: "pointer",
-            boxShadow: "0 6px 20px rgba(255, 77, 109, 0.4)",
+            boxShadow: "0 4px 16px rgba(233, 30, 140, 0.35)",
           }}
         >
-          Awww 🥰
+          Mwah 💋
         </button>
       </div>
 
@@ -183,7 +184,7 @@ function App() {
     <div
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #ff6b9d 0%, #ff8e53 50%, #ffcc70 100%)",
+        background: "#fdf6f9",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -199,32 +200,30 @@ function App() {
 
       <div
         style={{
-          background: "rgba(255, 255, 255, 0.15)",
-          backdropFilter: "blur(10px)",
-          borderRadius: "30px",
-          padding: "40px",
+          background: "#fff",
+          borderRadius: "24px",
+          padding: "48px 40px",
           textAlign: "center",
-          boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
-          maxWidth: "500px",
+          boxShadow: "0 8px 40px rgba(0,0,0,0.08)",
+          maxWidth: "440px",
           width: "100%",
         }}
       >
-        <div style={{ fontSize: "100px", marginBottom: "10px", lineHeight: 1 }}>
+        <div style={{ fontSize: "90px", marginBottom: "8px", lineHeight: 1 }}>
           🐱‍👤
         </div>
 
-        <div style={{ fontSize: "28px", marginBottom: "16px" }}>
+        <div style={{ fontSize: "26px", marginBottom: "20px" }}>
           🙈😅
         </div>
 
         <h1
           style={{
-            fontSize: "clamp(28px, 6vw, 48px)",
-            color: "white",
-            textShadow: "2px 2px 10px rgba(0,0,0,0.3)",
+            fontSize: "clamp(26px, 6vw, 44px)",
+            color: "#222",
             fontWeight: "bold",
-            marginBottom: "35px",
-            letterSpacing: "1px",
+            marginBottom: "40px",
+            letterSpacing: "0.5px",
           }}
         >
           Tu Hash Mn Dkay
@@ -235,7 +234,7 @@ function App() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "24px",
+            gap: "20px",
           }}
         >
           <button
@@ -244,14 +243,14 @@ function App() {
               padding: "14px 36px",
               fontSize: "18px",
               fontWeight: "bold",
-              background: "linear-gradient(135deg, #ff4d6d, #c9184a)",
+              background: "#e91e8c",
               color: "white",
               border: "none",
               borderRadius: "50px",
               cursor: "pointer",
               transform: `scale(${Math.min(baleScale, 4)})`,
               transition: "transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
-              boxShadow: "0 6px 20px rgba(255, 77, 109, 0.5)",
+              boxShadow: "0 4px 18px rgba(233, 30, 140, 0.35)",
               whiteSpace: "nowrap",
             }}
           >
@@ -265,12 +264,11 @@ function App() {
                 padding: "10px 24px",
                 fontSize: "14px",
                 fontWeight: "600",
-                background: "rgba(255,255,255,0.2)",
-                color: "rgba(255,255,255,0.8)",
-                border: "2px solid rgba(255,255,255,0.4)",
+                background: "transparent",
+                color: "#aaa",
+                border: "1.5px solid #ddd",
                 borderRadius: "50px",
                 cursor: "pointer",
-                backdropFilter: "blur(5px)",
               }}
             >
               Naxer 🙅
