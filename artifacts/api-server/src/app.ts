@@ -1,4 +1,4 @@
-import express, { type Express } from "express";
+import express, { type Express, type RequestHandler } from "express";
 import cors from "cors";
 import pinoHttp, { type Options } from "pino-http";
 import router from "./routes";
@@ -24,7 +24,9 @@ const pinoHttpOptions: Options = {
   },
 };
 
-app.use(pinoHttp(pinoHttpOptions));
+// pino-http uses CJS `export =` which needs an explicit cast under moduleResolution: bundler
+const pinoHttpMiddleware = pinoHttp as unknown as (opts: Options) => RequestHandler;
+app.use(pinoHttpMiddleware(pinoHttpOptions));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
