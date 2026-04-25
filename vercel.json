@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm --filter @workspace/love-page run build:gh-pages",
-  "outputDirectory": "artifacts/love-page/dist",
+  "outputDirectory": "dist",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "framework": null
 }

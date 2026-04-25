@@ -50,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: artifacts/love-page/dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
